@@ -45,6 +45,8 @@ https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL
 
 ## <a name="parte1">1 - Introdução (2021)</a>
 
+- [https://youtu.be/wsAQQioPIJs](https://youtu.be/wsAQQioPIJs)
+
 
 
 [Voltar ao Índice](#indice)
@@ -54,7 +56,7 @@ https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL
 
 ## <a name="parte2">2 - Como instalar o Vue (2021)</a>
 
-
+- [https://youtu.be/-w1VVGycLRM](https://youtu.be/-w1VVGycLRM)
 
 [Voltar ao Índice](#indice)
 
