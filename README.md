@@ -65,7 +65,43 @@ https://www.youtube.com/playlist?list=PLnDvRpP8BnezDglaAvtWgQXzsOmXUuRHL
 
 ## <a name="parte3">3 - Inputs e Data Binding</a>
 
+```javascript
+const MyName = {
+    data(){
+        return{
+            nome: "José",
+            idade: 37,
+            input_name: ''
+        }
+    },
+    methods:{
+        submitForm(e) {
+            e.preventDefault();
 
+            console.log(this.input_name);
+
+            this.nome = this.input_name;
+        }
+    }
+}
+Vue.createApp(MyName).mount("#app");
+
+```
+
+```html
+<body>
+    <div id="app">
+        <form id="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite Seu nome">
+            <input type="submit" value="Enviar" v-on:click="submitForm">
+        </form>
+        <p>O meu nome É: {{nome}} e tenho {{idade}} de idade</p>
+        <p>DataBind {{input_name}}</p>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="src/app.js"></script>
+</body>
+```
 
 [Voltar ao Índice](#indice)
 
