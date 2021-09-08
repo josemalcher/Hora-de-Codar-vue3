@@ -119,7 +119,49 @@ Vue.createApp(MyName).mount("#app");
 
 ## <a name="parte5">5 - Criando componentes</a>
 
+```vue
+<template>
+<PrimeiroComponente></PrimeiroComponente>
+</template>
 
+<script>
+import PrimeiroComponente from "./components/PrimeiroComponente";
+
+export default {
+  name: 'App',
+  components: {
+    PrimeiroComponente
+  }
+}
+</script>
+
+<style>
+
+</style>
+
+```
+
+```vue
+<template>
+    <PrimeiroComponente />
+</template>
+
+<script>
+import PrimeiroComponente from "./components/PrimeiroComponente";
+
+export default {
+  name: 'App',
+  components: {
+    PrimeiroComponente
+  }
+}
+</script>
+
+<style>
+
+</style>
+
+```
 
 [Voltar ao Índice](#indice)
 
