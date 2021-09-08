@@ -110,7 +110,7 @@ Vue.createApp(MyName).mount("#app");
 
 ## <a name="parte4">4 - Utilizando o Vue CLI</a>
 
-
+- [04-Utilizando-o-Vue-CLI/projeto_cli_vue](04-Utilizando-o-Vue-CLI/projeto_cli_vue)
 
 [Voltar ao Índice](#indice)
 
