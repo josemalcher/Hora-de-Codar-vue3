@@ -2,20 +2,25 @@
   <div>
     <PrimeiroComponente></PrimeiroComponente>
     <p>Dado d APP {{ appMensagem }}</p>
-    <br>
+    <hr>
     <LifeCicle />
+    <hr>
+    <pessoa/>
   </div>
 </template>
 
 <script>
 import PrimeiroComponente from "./components/PrimeiroComponente";
 import LifeCicle from "./components/LifeCicle";
+import Pessoa from "./components/Pessoa";
+
 
 export default {
   name: 'App',
   components: {
     PrimeiroComponente,
-    LifeCicle
+    LifeCicle,
+    Pessoa
   },
   data() {
     return {
