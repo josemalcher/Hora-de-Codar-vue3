@@ -587,7 +587,57 @@ export default {
 
 ## <a name="parte15">15 - Múltiplos eventos</a>
 
+- [04-Utilizando-o-Vue-CLI/projeto_cli_vue/src/components/MultiplosEventos.vue](04-Utilizando-o-Vue-CLI/projeto_cli_vue/src/components/MultiplosEventos.vue)
 
+```vue
+<template>
+  <div>
+    <button @click="primeiro(txt1, $event),
+                    segundo (txt2, $event),
+                    terceiro()
+     ">Ativar Multiplos eventos</button>
+    <p>{{ multiplos_eventos }}</p>
+    <p>{{ multiplos_eventos_2 }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MultiplosEventos",
+  data(){
+    return{
+      multiplos_eventos: '',
+      multiplos_eventos_2: '',
+      txt1: 'Primeiro Evento',
+      txt2: 'Segundo Evento',
+    }
+  },
+  methods:{
+    primeiro(txt, e) {
+      this.multiplos_eventos = this.txt1
+    },
+    segundo(txt, e) {
+      setTimeout(()=>{
+        this.multiplos_eventos_2 = this.txt2
+      },1000)
+    },
+    terceiro() {
+      setTimeout(()=>{
+        this.multiplos_eventos   = ''
+        this.multiplos_eventos_2 = ''
+      },2000)
+    }
+  }
+}
+</script>
+
+<style scoped>
+div{
+  margin: 100px
+}
+</style>
+
+```
 
 [Voltar ao Índice](#indice)
 
