@@ -3,9 +3,13 @@
     <div v-if="ocupacao">
       <p class="paragrado-pai"><strong>Estou trabalhando no momento com:</strong></p>
       <ul>
-        <li>JS</li>
-        <li>VUE</li>
-        <li>C#</li>
+        <li v-for="(tecnologia, index) in backend_skill" v-bind:key="index">{{tecnologia}}</li>
+      </ul>
+      <p>Também trabalho usando:</p>
+      <ul>
+        <li v-for="tecfront in frontend_skill" :key="tecfront.id">
+          {{tecfront.language}}
+        </li>
       </ul>
     </div>
     <div v-else>
@@ -35,7 +39,14 @@ export default {
       ocupacao: true,
       email_view: false,
       blog: 'https://josemalcher.net',
-      textoBotao: 'Mostrar email'
+      textoBotao: 'Mostrar email',
+      backend_skill: ['PHP', 'JS', 'C#', 'NODE'],
+      frontend_skill:[
+        {id:1, language: 'HTML'},
+        {id:2, language: 'CSS'},
+        {id:3, language: 'VUE'},
+        {id:4, language: 'REACT'},
+      ]
     }
   }, methods:{
     showEmail(){
