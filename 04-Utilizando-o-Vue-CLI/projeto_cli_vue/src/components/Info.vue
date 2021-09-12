@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="ocupacao">
-      <p>Estou trabalhando no momento com:</p>
+      <p class="paragrado-pai"><strong>Estou trabalhando no momento com:</strong></p>
       <ul>
         <li>JS</li>
         <li>VUE</li>
@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      ocupacao: false,
+      ocupacao: true,
       email_view: false,
       blog: 'https://josemalcher.net',
       textoBotao: 'Mostrar email'
@@ -52,5 +52,7 @@ export default {
 </script>
 
 <style scoped>
-
+.paragrado-pai{
+  color: darkred;
+}
 </style>

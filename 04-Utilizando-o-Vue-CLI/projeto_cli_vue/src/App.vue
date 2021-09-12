@@ -1,7 +1,9 @@
 <template>
   <div>
+    <Header/>
+    <hr>
     <PrimeiroComponente></PrimeiroComponente>
-    <p>Dado d APP {{ appMensagem }}</p>
+    <p class="teste">Dado d APP {{ appMensagem }}</p>
     <hr>
     <LifeCicle />
     <hr>
@@ -13,14 +15,15 @@
 import PrimeiroComponente from "./components/PrimeiroComponente";
 import LifeCicle from "./components/LifeCicle";
 import Pessoa from "./components/Pessoa";
-
+import Header from "./components/Header";
 
 export default {
   name: 'App',
   components: {
     PrimeiroComponente,
     LifeCicle,
-    Pessoa
+    Pessoa,
+    Header
   },
   data() {
     return {
@@ -31,5 +34,14 @@ export default {
 </script>
 
 <style>
-
+body{
+  background-color: cadetblue;
+  color: darkblue;
+}
+a{
+  color: red;
+}
+.teste{
+  background-color: chocolate;
+}
 </style>
