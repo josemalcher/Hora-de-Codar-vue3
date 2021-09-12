@@ -17,6 +17,8 @@
     <p>Meu blob: <a v-bind:href="blog" target="_blank">Visitar</a></p>
     <hr>
     <Picture/>
+    <hr>
+    <button @click="showEmail">{{textoBotao}}</button>
   </div>
 </template>
 
@@ -32,7 +34,18 @@ export default {
     return {
       ocupacao: false,
       email_view: false,
-      blog: 'https://josemalcher.net'
+      blog: 'https://josemalcher.net',
+      textoBotao: 'Mostrar email'
+    }
+  }, methods:{
+    showEmail(){
+      //console.log("Testando email")
+      this.email_view = !this.email_view;
+      if(!this.textoBotao){
+        this.textoBotao = 'Mostrar E-mail'
+      }else{
+        this.textoBotao = 'Esconder E-mail'
+      }
     }
   }
 }
