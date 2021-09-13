@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header/>
+    <Header :esta_logado='true' />
     <hr>
     <PrimeiroComponente></PrimeiroComponente>
     <p class="teste">Dado d APP {{ appMensagem }}</p>

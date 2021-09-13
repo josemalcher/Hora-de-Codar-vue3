@@ -695,12 +695,12 @@ export default {
 
 ```vue
 <template>
-<div>
-  <h2>Esta é a descrição da Pessoa: {{ nome}}</h2>
-<!--  <Info compEmail="email.PROP@email.com" />-->
-  <Info :compEmail="email" />
-  <FormVue/>
-</div>
+  <div>
+    <h2>Esta é a descrição da Pessoa: {{ nome}}</h2>
+    <!--  <Info compEmail="email.PROP@email.com" />-->
+    <Info :compEmail="email" :estaTrabalhando="false" />
+    <FormVue/>
+  </div>
 </template>
 
 <script>
@@ -721,16 +721,13 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
-
 ```
 
 ```vue
   props:{
-    compEmail: String
-  },
+    compEmail: String,
+    ocupacao: false
+},
 ```
 
 [Voltar ao Índice](#indice)

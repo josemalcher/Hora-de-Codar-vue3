@@ -36,14 +36,15 @@ import Picture from "./Picture";
 export default {
   name: "Info",
   props:{
-    compEmail: String
+    compEmail: String,
+    ocupacao: false
   },
   components: {
     Picture
   },
   data() {
     return {
-      ocupacao: false,
+      //ocupacao: false,
       email_view: true,
       blog: 'https://josemalcher.net',
       //email: '',

@@ -2,7 +2,7 @@
 <div>
   <h2>Esta é a descrição da Pessoa: {{ nome}}</h2>
 <!--  <Info compEmail="email.PROP@email.com" />-->
-  <Info :compEmail="email" />
+  <Info :compEmail="email" :estaTrabalhando="false" />
   <FormVue/>
 </div>
 </template>
