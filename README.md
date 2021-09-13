@@ -811,7 +811,16 @@ export default {
 
 ## <a name="parte20">20 - Criando uma API com JSON server</a>
 
+```
+"scripts": {
+    "backend": "json-server --watch db/db.json"
+  },
+  "dependencies": {
+    "json-server": "^0.16.3",
+  },
+```
 
+- [projetoburger/db/db.json](projetoburger/db/db.json)
 
 [Voltar ao Índice](#indice)
 
