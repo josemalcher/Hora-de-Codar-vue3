@@ -1,5 +1,9 @@
 <template>
   <div>
+    <hr>
+    <p>PROPs</p>
+    <p>{{compEmail}}</p>
+    <hr>
     <div v-if="ocupacao">
       <p class="paragrado-pai"><strong>Estou trabalhando no momento com:</strong></p>
       <ul>
@@ -14,7 +18,7 @@
     </div>
     <div v-else>
       <p><strong>Estou em busca de uma Vaga</strong></p>
-      <p v-show="email_view"><strong>Meu email é: teste@teste.com</strong></p>
+      <p v-show="email_view"><strong>Meu email é: {{compEmail}}</strong></p>
     </div>
     <p v-if="4 > 2">4 é maior que 2</p>
     <hr>
@@ -31,14 +35,18 @@ import Picture from "./Picture";
 
 export default {
   name: "Info",
+  props:{
+    compEmail: String
+  },
   components: {
     Picture
   },
   data() {
     return {
-      ocupacao: true,
-      email_view: false,
+      ocupacao: false,
+      email_view: true,
       blog: 'https://josemalcher.net',
+      //email: '',
       textoBotao: 'Mostrar email',
       backend_skill: ['PHP', 'JS', 'C#', 'NODE'],
       frontend_skill:[

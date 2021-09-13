@@ -691,7 +691,47 @@ export default {
 
 ## <a name="parte17">17 - Utilizando props</a>
 
+- [04-Utilizando-o-Vue-CLI/projeto_cli_vue/src/components/Pessoa.vue](04-Utilizando-o-Vue-CLI/projeto_cli_vue/src/components/Pessoa.vue)
 
+```vue
+<template>
+<div>
+  <h2>Esta é a descrição da Pessoa: {{ nome}}</h2>
+<!--  <Info compEmail="email.PROP@email.com" />-->
+  <Info :compEmail="email" />
+  <FormVue/>
+</div>
+</template>
+
+<script>
+import Info from "./Info";
+import FormVue from "./FormVue";
+export default {
+  name: "Pessoa",
+  components:{
+    Info,
+    FormVue
+  },
+  data(){
+    return {
+      nome: 'José',
+      email: 'email.PROP@email.com'
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+
+```
+
+```vue
+  props:{
+    compEmail: String
+  },
+```
 
 [Voltar ao Índice](#indice)
 
