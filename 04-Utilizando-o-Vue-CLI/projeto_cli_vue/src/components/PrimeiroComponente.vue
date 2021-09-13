@@ -4,15 +4,22 @@
     <p>Meu nome é {{ nome }} e trabalho como {{ job }}</p>
     <hr>
     <MultiplosEventos/>
+    <hr>
+    <Reutilizacao/>
+    <Reutilizacao/>
+    <Reutilizacao/>
+    <Reutilizacao/>
   </div>
 </template>
 
 <script>
 import MultiplosEventos from "./MultiplosEventos";
+import Reutilizacao     from "./Reutilizacao";
+
 
 export default {
   name: "PrimeiroComponente",
-  components: {MultiplosEventos},
+  components: {MultiplosEventos, Reutilizacao},
   data() {
     return {
       nome: "José",
