@@ -829,7 +829,28 @@ export default {
 
 ## <a name="parte21">21 - Implementando o Vue Router</a>
 
+```vue
+<template>
+  <div id="nav">
+    <router-link to="/">
+      <img src="" id="logo">
+    </router-link>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/pedidos">Pedidos</router-link>
+  </div>
+</template>
 
+<script>
+export default {
+  name: "Navbar"
+}
+</script>
+
+<style scoped>
+
+</style>
+
+```
 
 [Voltar ao Índice](#indice)
 
