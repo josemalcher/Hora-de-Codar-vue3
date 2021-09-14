@@ -1,5 +1,5 @@
 <template>
-  <!--  <Message :msg="msg" v-show="msg" />-->
+    <Message :msg="msg" v-show="msg" />
   <div>
     <form id="burger-form" method="POST" @submit="createBurger">
       <div class="input-container">
@@ -37,8 +37,10 @@
 </template>
 
 <script>
+import Message from "./Message";
 export default {
   name: "BurgerForm",
+  components:{Message},
   data() {
     return {
       paes: null,
@@ -83,6 +85,9 @@ export default {
 
       console.log(res)
 
+      this.msg = `Pedido nº ${res.id} Realizado com Sucesso`
+      // clear message
+      setTimeout(() => this.msg = "", 3000)
 
       // limpar campos
       this.nome = ""
